@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+/**
+ * @copyright	Copyright © 2023 - All rights reserved.
+ * @license		GNU General Public License v2.0
+ */
+-->
+<extension type="module" method="upgrade" client="site">
+	<name>MOD_DARKMODETOGGLE</name>
+	<creationDate>Nov 2023</creationDate>
+	<author>Alvin Gil Saldaña</author>
+	<authorEmail>alvin_gil@hotmail.com</authorEmail>
+	<authorUrl>https://github.com/alvinalvin</authorUrl>
+	<copyright>Copyright © 2023 - All rights reserved.</copyright>
+	<license>GNU General Public License v2.0</license>
+	<version>1.0.0</version>
+	<description>MOD_DARKMODETOGGLE_DESCRIPTION</description>
+	<files>
+		<filename module="mod_darkmodetoggle">mod_darkmodetoggle.php</filename>
+		<filename>mod_darkmodetoggle.xml</filename>
+		<filename>index.html</filename>
+		<folder>language</folder>
+		<folder>tmpl</folder>
+		<folder>assets</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="transition" type="range" default="0.5" label="transition" description="" min="0.1" max="0.9" step="0.1" />
+				<field name="background" default="#FFFFFF" type="color" label="background-color-button"/>
+				<field name="background-circle" default="#000000" type="color" label="background-color-circle"/>
+				<field name="border-button" default="#000000" type="color" label="border-color-button"/>
+
+			</fieldset>
+			<fieldset
+				name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="textarea" rows="3"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static">
+					<option
+						value="static"></option>
+				</field>
+			</fieldset>
+</fields>
+
+
+	</config>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.mod_darkmodetoggle.sys.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_darkmodetoggle.ini</language>
+	</languages>
+	<updateservers>
+	  <server type="extension" name="MOD_DARKMODETOGGLE">https://github.com/alvinalvin/updateserver.github.io/blob/main/darkmodetoggle.xml</server>
+ </updateservers>
+</extension>
